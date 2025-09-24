@@ -1,0 +1,113 @@
+\input{./src/main.sty}
+% Additional SI unit for Fahrenheit
+\DeclareSIUnit\fahrenheit{\degree F}
+
+\begin{document}
+
+% Include title page
+\input{./src/titlepage.tex}
+
+\pagebreak
+
+\begin{enumerate}
+  \item {[25 pts]} An intermetallic undergoes a first-order phase
+    transformation from a non-conductive $\alpha$
+    phase to a conductive $\beta$ phase by application of a magnetic
+    field, $B$, which has units of tesla (T). The
+    conjugate of $B$ is $M$ (i.e., magnetic moment). The unary phase
+    diagram for this material is shown
+    below. To generate the necessary data, several experiments were
+    performed at atmospheric pressure in
+    which temperature and magnetic field were controlled. It was
+    found that when no magnetic field was
+    applied, the latent heat of the transformation from $\alpha$ to
+    $\beta$ was \SI{280}{\joule\per\mole}. Determine the difference in
+    magnetic moment of the $\alpha$ and $\beta$ phases with the
+    appropriate units.
+
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.6\textwidth]{./assets/fig_1.png}
+    \end{figure}
+
+    \pagebreak
+
+  \item {[70 pts]} When Dr. MacLain first studied vibranium, it was a soft
+    ductile material. However, after his
+    initial heat treatments, it was always a very hard material, at
+    both low and high temperatures regardless
+    of how he heat treated it further. About 70 years later, his
+    great-granddaughter used computational
+    materials science to solve the mystery. From her calculations,
+    she found that it should form a previously
+    unknown phase at room temperature, which is soft and ductile! In
+    her resulting Nature: Marvel
+    Materials paper, she postulated that the formation kinetics of
+    this phase were incredibly slow, and it
+    had only formed after thousands of years below the ground of
+    Wakanda, where it was relatively near
+    room temperature. She also renamed the solid vibranium phases as
+    $\alpha$ (low temperature), $\beta$ (moderate
+    temperature), and $\gamma$ (high temperature). She was able to form the
+    $\beta$ phase by annealing $\gamma$-vibranium
+    near the melting point and then aging at ~\SI{900}{\kelvin} for several
+    months. Therefore, she was able to
+    determine the properties of $\beta$-vibranium as well as the latent
+    heat of $\beta$ phase transforming to $\alpha$ phase
+    upon cooling. Based on these experiments and those of her
+    great-grandfather, the following vibranium
+    properties are now known:
+
+    \begin{itemize}
+      \item Boiling point $T^B(P = \SI{101}{\kilo\pascal}) = \SI{4501}{\kelvin}$
+      \item Melting point $T^M(P = \SI{101}{\kilo\pascal}) = \SI{1789}{\kelvin}$
+      \item $\alpha \rightarrow \beta$ transformation temperature
+        $T^{\alpha\rightarrow\beta}(P = \SI{101}{\kilo\pascal}) =
+        \SI{244}{\kelvin}$
+      \item $\beta\rightarrow\gamma$ transformation temperature
+        $T^{\beta\rightarrow\gamma}(P = \SI{101}{\kilo\pascal}) =
+        \SI{943}{\kelvin}$
+      \item Latent heat of vaporization $\Delta H^V =
+        \SI{121}{\kilo\joule\per\mole}$
+      \item Latent heat of fusion $\Delta H^F =
+        \SI{65.3}{\kilo\joule\per\mole}$
+      \item Latent heat of $\alpha \rightarrow \gamma$ transformation
+        $\Delta H^{\alpha\rightarrow\gamma} = 91.1 kJ/mol$
+      \item Latent heat of $\beta\rightarrow\alpha$ transformation
+        $\Delta H^{\beta\rightarrow\alpha} =
+        \SI{-41.7}{\kilo\joule\per\mole}$
+      \item Atomic weight of vibranium AW\textsubscript{vibranium} =
+        \SI{45.3}{\gram\per\mole}
+      \item Mass density of $\alpha$ phase: $\rho_\alpha =
+        \SI{5.45}{\gram\per\centi\meter\cubed}$
+      \item Mass density of $\beta$ phase: $\rho_\alpha =
+        \SI{5.50}{\gram\per\centi\meter\cubed}$
+      \item Mass density of $\gamma$ phase: $\rho_\alpha =
+        \SI{4.99}{\gram\per\centi\meter\cubed}$
+      \item Mass density of liquid phase: $\rho_L =
+        \SI{4.28}{\gram\per\centi\meter\cubed}$
+    \end{itemize}
+
+    \begin{enumerate}[(a)]
+      \item {[60 pts]} Using ALL the data in the table above,
+        determine phase boundaries and plot (e.g. with
+        software such as Excel, Mathematica, etc.) the unary phase
+        diagram for vibranium with $\ln P$
+        vs. $T^{-1}$ axes from \SI{2e-58}{Pa} to atmospheric pressure and
+        \SI{200}{\kelvin} to \SI{5000}{\kelvin}. You must also
+        label the temperature and pressure values $(T,P)$ of every
+        triple point on the phase diagram.
+        Hint: use a computer to help you solve parts of this problem.
+      \item {[15 pts]} Predict the temperature at which
+        $\alpha$-vibranium was
+        observed to transform to $\gamma$ phase
+        during Dr. MacLain’s original experiments.
+    \end{enumerate}
+
+\end{enumerate}
+
+\section*{Supporting code:}
+
+\inputminted{julia}{./calculations/src/calculations.jl}
+
+\end{document}
