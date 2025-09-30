@@ -30,6 +30,64 @@
       \includegraphics[width=0.6\textwidth]{./assets/fig_1.png}
     \end{figure}
 
+    \boxedanswer{
+
+      We can write the internal energy as follows (Considering M
+      as the conjugate of B):
+
+      \begin{align*}
+        dU &= TdS - PdV + \mu dN + B dM
+      \end{align*}
+
+      Considering the Legendre transform of $U$:
+
+      \begin{align*}
+        G &= U - TS + PV \\
+        dG &= dU - TdS - SdT + PdV + VdP \\
+        dG &= [\cancel{TdS} - \cancel{PdV} + \mu dN + B dM] - \cancel{TdS} -
+        SdT + \cancel{PdV} + VdP \\
+        dG &= \mu dN + B dM - SdT + VdP \\
+      \end{align*}
+
+      Appy a Legendre transform ($dG' = dG - BdM - MdB$):
+
+      \begin{align*}
+        dG' &= \mu dN - M dB - SdT + VdP
+      \end{align*}
+    }
+
+    \boxedanswer{
+      For a unary system, $\mu = G$:
+      \begin{align*}
+        d\mu &= \mu \overbrace{dN}^0 - M dB - SdT + V\overbrace{dP}^0 \\
+        d\mu &=  -M dB - SdT \\
+        d\mu^\alpha &=  -M^\alpha dB - S^\alpha dT = d\mu^\beta =
+        -M^\beta dB - S^\beta dT \\
+        \Delta S^{\alpha\rightarrow\beta} dT &= -\Delta
+        M^{\alpha\rightarrow\beta}dB \\
+        \frac{dB}{dT} &= -\frac{\Delta
+        S^{\alpha\rightarrow\beta}}{\Delta M^{\alpha\rightarrow\beta}} \\
+        \Delta S^{\alpha\rightarrow\beta} &= -\frac{\Delta
+        H^{\alpha\rightarrow\beta}}{T} \\
+        \frac{dB}{dT} &= -\frac{\Delta
+        H^{\alpha\rightarrow\beta}}{T\Delta M^{\alpha\rightarrow\beta}}
+      \end{align*}
+
+      Looking at the graph:
+
+      \begin{align*}
+        \frac{dB}{dT} &= \frac{-\SI{4}{T}}{\SI{40}{K}}  = -\SI{0.1}{T/K} \\
+        B &= 0 \rightarrow T = \SI{160}{K} \\
+        \Delta M^{\alpha\rightarrow\beta} &= -\frac{\Delta
+        H^{\alpha\rightarrow\beta}}{\frac{dB}{dT}T} \\
+        \Delta M^{\alpha\rightarrow\beta} &=
+        -\frac{\SI{280}{\joule\per\mole}}{(-\SI{0.1}{T/K})(\SI{}{\SI{160}{K}})}
+        \\
+        \Aboxed{\Delta
+        M^{\alpha\rightarrow\beta} &= \SI{17.5}{\joule\per\mole\per\tesla}}
+      \end{align*}
+    }
+
     \pagebreak
 
   \item {[70 pts]} When Dr. MacLain first studied vibranium, it was a soft
