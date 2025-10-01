@@ -138,9 +138,9 @@
         \SI{45.3}{\gram\per\mole}
       \item Mass density of $\alpha$ phase: $\rho_\alpha =
         \SI{5.45}{\gram\per\centi\meter\cubed}$
-      \item Mass density of $\beta$ phase: $\rho_\alpha =
+      \item Mass density of $\beta$ phase: $\rho_\beta =
         \SI{5.50}{\gram\per\centi\meter\cubed}$
-      \item Mass density of $\gamma$ phase: $\rho_\alpha =
+      \item Mass density of $\gamma$ phase: $\rho_\gamma =
         \SI{4.99}{\gram\per\centi\meter\cubed}$
       \item Mass density of liquid phase: $\rho_L =
         \SI{4.28}{\gram\per\centi\meter\cubed}$
@@ -156,10 +156,32 @@
         label the temperature and pressure values $(T,P)$ of every
         triple point on the phase diagram.
         Hint: use a computer to help you solve parts of this problem.
+
+        \boxedanswer{
+          \centering
+          \includegraphics[width=0.6\textwidth]{./assets/q2_fig.png}
+          \captionof{figure}{Phase diagram of vibranium}
+        }
+
       \item {[15 pts]} Predict the temperature at which
         $\alpha$-vibranium was
         observed to transform to $\gamma$ phase
         during Dr. MacLain’s original experiments.
+
+        \boxedanswer{
+
+          Consider the intersection of the $\alpha-V$ and $\gamma-V$ curves:
+
+          \begin{align*}
+            \ln\left(\frac{P}{P^{\gamma-L-V}}\right) = -\frac{\Delta
+            H^{\gamma\rightarrow V}}{nR}\left(\frac{1}{T}
+            - \frac{1}{T^M}\right) \\
+            \ln\left(\frac{P}{P^{\alpha-\beta-V}}\right) = -\frac{\Delta
+            H^{\alpha\rightarrow V}}{nR}\left(\frac{1}{T}
+            - \frac{1}{T^{\alpha\rightarrow\beta}}\right) \\
+          \end{align*}
+        }
+
     \end{enumerate}
 
 \end{enumerate}
